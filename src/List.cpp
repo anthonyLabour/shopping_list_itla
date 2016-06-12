@@ -18,9 +18,17 @@ List::List(): _first(NULL), _last(NULL)
 
 void List::add(Element* element)
 {
-	//TODO: Implement this method
-	cout << "You should write the code for adding " << element -> _name << endl;
+	if(_first == NULL)//if the list is empty, the new element is gonna the first and the last.
+	{
+		_first = element;
+		_last = element;
+	}
+	else //if the list is not empty
+	{
+		_last ->setNext(element);
+		_last = element;
 
+	}
 }
 
 void List::remove(int index)

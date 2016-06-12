@@ -9,6 +9,7 @@
 #include <iostream>
 using namespace std;
 
+	List* list = new List();
 Menu::Menu()
 {
 
@@ -73,8 +74,15 @@ void Menu::listItems()
 
 void Menu::addItems()
 {
-	//TODO: Implement this
-	cout << "Implement  Menu::addItems" << endl;
+	string name="";
+	
+	cout<< insert a new item<<endl;
+	cin>>name;
+
+	Element* item = new Element(name);
+	list->add(item);
+
+	cout << the new item has been added<<endl;	
 }
 
 void Menu::removeItems()
