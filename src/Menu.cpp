@@ -68,8 +68,14 @@ void Menu::routeAction(int option)
 
 void Menu::listItems()
 {
-	//TODO: Implement this
-	cout << "Implement  Menu::listItems" << endl;
+	Element* element = list-> getFirst();
+	cout << List of items available<<endl;
+	
+	while(element !=NULL)
+	{
+	cout << element -> getName() <<endl;
+		element = element->getNext();
+	}
 }
 
 void Menu::addItems()
@@ -87,6 +93,9 @@ void Menu::addItems()
 
 void Menu::removeItems()
 {
+	cout<< insert the number of item that what to remove<<endl;
+
+	
 	//TODO: Implement this
 	cout << "Implement  Menu::removeItems" << endl;
 }
